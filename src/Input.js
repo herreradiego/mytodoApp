@@ -44,9 +44,9 @@ render(){
         
         <div >
             <form onSubmit={this.addTask} className="inputWrapper">
-                <input className="input" placeholder="Add Todo Here" ref="task" type="text" onChange={this.handleInput}/>
+                <input className="input" placeholder="Add Todos Here and press ENTER :)" ref="task" type="text" onChange={this.handleInput}/>
                      <div id="addTodo">
-                <button type="submit" value="Agregar">Agregar</button>
+                {/*<button type="submit" value="Agregar">Agregar</button>-->*/}
             </div>
             </form>
         </div>

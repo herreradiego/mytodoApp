@@ -41,7 +41,9 @@ body{
 }
 
 
-
+input[type=checkbox] {
+  transform: scale(1.8);
+}
 
 .input{
   
