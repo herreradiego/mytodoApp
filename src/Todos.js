@@ -69,15 +69,15 @@ class Todos extends React.Component{
                 if(task.checked){
                     return(
                         <div  className="todosContainer checked" key={index}  onMouseEnter={e=>{this.handleHover(index)}} onMouseLeave={e=>this.handleLeave(index)}>
-                        <div   id="doneChecker"><input onChange={e=>this.handleCheck(index)} type="checkbox"/></div><p>{task.description}</p>
-                        <button  className={task.active ? 'show':'hide'}  ref="delBtn" index={index}  onClick={e=>this.deleteTask(index)}>DELETE</button>
-                    </div>
+                            <div   id="doneChecker"><input onChange={e=>this.handleCheck(index)} type="checkbox"/></div><p className="done">{task.description}</p>
+                            <button  className={task.active ? 'show deleteBtn':'hide'}  ref="delBtn" index={index}  onClick={e=>this.deleteTask(index)}>DELETE</button>
+                        </div>
                     )
                 }
                 return(
                     <div  className={task.cheked ? 'todosContainer checked':'todosContainer'} key={index}  onMouseEnter={e=>{this.handleHover(index)}} onMouseLeave={e=>this.handleLeave(index)}>
                         <div   id="doneChecker"><input onChange={e=>this.handleCheck(index)} type="checkbox"/></div><p>{task.description}</p>
-                        <button  className={task.active ? 'show':'hide'}  ref="delBtn" index={index}  onClick={e=>this.deleteTask(index)}>DELETE</button>
+                        <button  className={task.active ? 'show deleteBtn':'hide deleteBtn'}  ref="delBtn" index={index}  onClick={e=>this.deleteTask(index)}>DELETE</button>
                     </div>
                     )
                 })
